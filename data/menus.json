@@ -1,0 +1,1574 @@
+[
+    [
+        "var",
+        "npc_m_quest_stage",
+        "int"
+    ],
+    [
+        "var",
+        "npc_t_quest_stage",
+        "int"
+    ],
+    [
+        "menu",
+        "TITLE_NO_LOAD",
+        "Press w or the up arrow to move up. Press d or the down arrow to move down. Press enter to select an option.",
+        [
+            "NEW_GAME",
+            "QUIT_GAME"
+        ]
+    ],
+    [
+        "menu",
+        "TITLE_LOAD",
+        "Press w or the up arrow to move up. Press d or the down arrow to move down. Press enter to select an option.",
+        [
+            "LOAD_GAME_TITLE",
+            "NEW_GAME",
+            "QUIT_GAME"
+        ]
+    ],
+    [
+        "menu",
+        "TITLE_LOAD_FAIL",
+        "Unable to load game.",
+        [
+            "RETURN_TO_TITLE_MENU"
+        ]
+    ],
+    [
+        "menu",
+        "PAUSE_NO_LOAD",
+        "Press w or the up arrow to move up. Press d or the down arrow to move down. Press enter to select an option. Press p to unpause.",
+        [
+            "SAVE_GAME",
+            "QUIT_GAME"
+        ]
+    ],
+    [
+        "menu",
+        "PAUSE_LOAD",
+        "Press w or the up arrow to move up. Press d or the down arrow to move down. Press enter to select an option. Press p to unpause.",
+        [
+            "SAVE_GAME",
+            "LOAD_GAME_PAUSE",
+            "QUIT_GAME"
+        ]
+    ],
+    [
+        "menu",
+        "PAUSE_LOAD_FAIL",
+        "Unable to load game.",
+        [
+            "RETURN_TO_PAUSE_MENU"
+        ]
+    ],
+    [
+        "menu",
+        "SAVE_FAIL",
+        "Unable to save game.",
+        [
+            "RETURN_TO_PAUSE_MENU"
+        ]
+    ],
+    [
+        "menu",
+        "SAVE_SUCCESSFUL",
+        "Game saved successfully.",
+        [
+            "RETURN_TO_PAUSE_MENU"
+        ]
+    ],
+    [
+        "menu",
+        "OVERWRITE_PROMPT",
+        "A save file already exists. Are your sure you would like to overwrite it?",
+        [
+            "YES_OVERWRITE",
+            "NO_OVERWRITE"
+        ]
+    ],
+    [
+        "option",
+        "NEW_GAME",
+        "New game.",
+        null,
+        "new_game();"
+    ],
+    [
+        "option",
+        "LOAD_GAME_TITLE",
+        "Load game.",
+        null,
+        "try_load_game_title();"
+    ],
+    [
+        "option",
+        "LOAD_GAME_PAUSE",
+        "Load game.",
+        null,
+        "try_load_game_pause();"
+    ],
+    [
+        "option",
+        "QUIT_GAME",
+        "Quit game.",
+        null,
+        "quit_game();"
+    ],
+    [
+        "option",
+        "SAVE_GAME",
+        "Save game.",
+        null,
+        "try_save_game();"
+    ],
+    [
+        "option",
+        "RETURN_TO_TITLE_MENU",
+        "Return to title menu.",
+        null,
+        "return_to_title_menu();"
+    ],
+    [
+        "option",
+        "RETURN_TO_PAUSE_MENU",
+        "Return to pause menu.",
+        null,
+        "return_to_pause_menu();"
+    ],
+    [
+        "option",
+        "YES_OVERWRITE",
+        "Yes, overwrite the existing save.",
+        null,
+        "yes_overwrite();"
+    ],
+    [
+        "option",
+        "NO_OVERWRITE",
+        "No, don't overwrite the existing save.",
+        null,
+        "no_overwrite();"
+    ],
+    [
+        "option",
+        "BYE",
+        "Bye.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "INDEED",
+        "Indeed.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "WILL_DO",
+        "Will do.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "SEE_YA",
+        "See ya!",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "GREAT",
+        "Great!",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "RIGHT_ON",
+        "Right on!",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "OKAY",
+        "Okay.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "THANKS",
+        "Thanks!",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "menu",
+        "TUTORIAL_SIGN",
+        "Welcome to Elysium! Use the wasd or arrow keys to move. Press p to pause the game. Capital letters are people. You can talk with people by walking into them. Try pressing d to move to the right.",
+        []
+    ],
+    [
+        "menu",
+        "A_1",
+        "Hey player! Are you coming to the Field tonight?",
+        [
+            "A_1_1",
+            "A_1_2",
+            "A_1_3"
+        ]
+    ],
+    [
+        "menu",
+        "A_2",
+        "Are you new here? The Field is the local nightclub! So are you coming?",
+        [
+            "A_1_2",
+            "A_1_3"
+        ]
+    ],
+    [
+        "menu",
+        "A_3",
+        "Cool! See you there :)",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "A_4",
+        "Aww, you should come! Though if you really don't want to go then I guess I won't, either...",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "A_5",
+        "See you tonight player!",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "A_0",
+        "Nice to see you player! Let's all have some fun tonight.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "option",
+        "A_1_1",
+        "What is the Field?",
+        "A_2",
+        ""
+    ],
+    [
+        "option",
+        "A_1_2",
+        "Yes",
+        "A_3",
+        "game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = A_5; convince_speaker();"
+    ],
+    [
+        "option",
+        "A_1_3",
+        "No",
+        "A_4",
+        ""
+    ],
+    [
+        "menu",
+        "B_1",
+        "Test",
+        [
+            "B_1_1"
+        ]
+    ],
+    [
+        "menu",
+        "B_2",
+        "Test",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "option",
+        "B_1_1",
+        "Respond",
+        "B_2",
+        ""
+    ],
+    [
+        "menu",
+        "C_1",
+        "Howdy there player, want in to Elysium? I'll let you enter, but be aware there's no re-entry.",
+        [
+            "C_1_1",
+            "C_1_2"
+        ]
+    ],
+    [
+        "option",
+        "C_1_1",
+        "I'm ready.",
+        null,
+        "load_ending_level(); enter_state_level();"
+    ],
+    [
+        "option",
+        "C_1_2",
+        "I'll be back later.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "menu",
+        "D_0",
+        "Hahaha...I'm really...dizzy right now...if you catch my...drift.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "D_1",
+        "Hey you!",
+        [
+            "D_1_1"
+        ]
+    ],
+    [
+        "menu",
+        "D_2",
+        "Yes, you. Do you like to spin around?",
+        [
+            "D_2_1",
+            "D_2_2"
+        ]
+    ],
+    [
+        "menu",
+        "D_3",
+        "Perfect, then you're just the player I'm looking for. I want you to make me dizzy.",
+        [
+            "D_3_1",
+            "D_3_2"
+        ]
+    ],
+    [
+        "menu",
+        "D_4",
+        "Then I'll make myself dizzy then. Though the last time I tried that I might have made myself too dizzy...",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "D_5",
+        "Excellent! Walk a lap around me, going clockwise. That should do the trick, but if you mess up you'll have to start over.",
+        [
+            "D_5_1"
+        ]
+    ],
+    [
+        "menu",
+        "D_6",
+        "Ahh...hahaha...so dizzy...thank you...",
+        [
+            "D_6_1"
+        ]
+    ],
+    [
+        "menu",
+        "D_7",
+        "Anything...for you...haha...",
+        [
+            "D_7_1"
+        ]
+    ],
+    [
+        "menu",
+        "D_8",
+        "Haha...see you...tonight...",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "option",
+        "D_1_1",
+        "Me?",
+        "D_2",
+        ""
+    ],
+    [
+        "option",
+        "D_2_1",
+        "You bet.",
+        "D_3",
+        ""
+    ],
+    [
+        "option",
+        "D_2_2",
+        "Uh, not particularly, no.",
+        "D_4",
+        ""
+    ],
+    [
+        "option",
+        "D_3_1",
+        "Ok!",
+        "D_5",
+        ""
+    ],
+    [
+        "option",
+        "D_3_2",
+        "Nope, too weird.",
+        "D_4",
+        ""
+    ],
+    [
+        "option",
+        "D_5_1",
+        "Sure thing.",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = D_5; game.npc_d_quest_active = 1;"
+    ],
+    [
+        "option",
+        "D_6_1",
+        "Want to get dizzy at the Field?",
+        "D_7",
+        ""
+    ],
+    [
+        "option",
+        "D_7_1",
+        "Yay!",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = D_8; convince_speaker();"
+    ],
+    [
+        "menu",
+        "H_0",
+        "I plucked on of the flowers from the hibiscus you gave me and put it in my hair, how does it look?",
+        [
+            "H_0_1",
+            "H_0_2"
+        ]
+    ],
+    [
+        "menu",
+        "H_01",
+        "Yay!",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "H_02",
+        "Ah, well at least I guess purple isn't my color...",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "H_1",
+        "Welcome to my plant shop! What can I help you with?",
+        [
+            "H_1_1",
+            "H_1_2"
+        ]
+    ],
+    [
+        "menu",
+        "H_2",
+        "Sorry, but I have plans after work tonight.",
+        [
+            "H_2_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_3",
+        "I'm going hibiscus hunting!",
+        [
+            "H_3_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_4",
+        "Yep! In case you haven't noticed, my shop lacks flowers. While I could just pick a few flowers from the meadow to the northeast of here, I have my eyes set on a particular flower.",
+        [
+            "H_4_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_5",
+        "A purple hibiscus! They're so rare that I wouldn't be surprised if there were only one in all of Elysium and it surrounding islands.",
+        [
+            [
+                "flag(HAS_HIBISCUS)",
+                "H_5_1"
+            ],
+            "H_5_2"
+        ]
+    ],
+    [
+        "menu",
+        "H_6",
+        "Oh my gosh yes! I'll plant this right away so I can join you tonight at the Field!",
+        [
+            "H_6_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_7",
+        "If it's not a hassle then sure! Good luck trying to find one.",
+        [
+            "H_7_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_8",
+        "Did you find the hibiscus?",
+        [
+            [
+                "flag(HAS_HIBISCUS)",
+                "H_5_1"
+            ],
+            "H_8_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_9",
+        "Ok, good luck!",
+        [
+            "THANKS"
+        ]
+    ],
+    [
+        "menu",
+        "H_10",
+        "I've never seen a purple hibiscus in person before. Now that I have one, I can't help but notice how similar in appearance it is to violet nightshade...",
+        [
+            "H_10_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_11",
+        "A flower which is as beautiful as it is deadly. One touch and you have had to go to the hospital. I'm sorry to have put you in danger.",
+        [
+            "H_11_1",
+            "H_11_2"
+        ]
+    ],
+    [
+        "menu",
+        "H_12",
+        "Thanks. If it's any consolation, I doubt you would have found one: they grow in places that the average person wouldn't think to look. Now someone like Xavier or me on the other hand...",
+        [
+            "H_12_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_13",
+        "I know...Anyway, see you tonight I guess.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "H_14",
+        "Well, he and I know more about flowers than the average person. So if I went hunting for the purple hibiscus tonight, I might have looked for it in places where violet nightshade grow and accidentally picked on of those instead.",
+        [
+            "H_14_1"
+        ]
+    ],
+    [
+        "menu",
+        "H_15",
+        "Very bad. So thanks again; you may have saved me a trip to the hospital.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "option",
+        "H_0_1",
+        "It looks great!",
+        "H_01",
+        ""
+    ],
+    [
+        "option",
+        "H_0_2",
+        "It doesn't suit you.",
+        "H_02",
+        ""
+    ],
+    [
+        "option",
+        "H_1_1",
+        "Come to the Field tonight?",
+        "H_2",
+        ""
+    ],
+    [
+        "option",
+        "H_1_2",
+        "Nothing, thanks.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "H_2_1",
+        "Such as?",
+        "H_3",
+        ""
+    ],
+    [
+        "option",
+        "H_3_1",
+        "Hibiscus hunting?",
+        "H_4",
+        ""
+    ],
+    [
+        "option",
+        "H_4_1",
+        "What kind of flower?",
+        "H_5",
+        ""
+    ],
+    [
+        "option",
+        "H_5_1",
+        "I found one, you want it?",
+        "H_6",
+        ""
+    ],
+    [
+        "option",
+        "H_5_2",
+        "I could look for you.",
+        "H_7",
+        ""
+    ],
+    [
+        "option",
+        "H_6_1",
+        "Cool!",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = H_10; convince_speaker();"
+    ],
+    [
+        "option",
+        "H_7_1",
+        "I'll be back.",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = H_8;"
+    ],
+    [
+        "option",
+        "H_8_1",
+        "Not yet.",
+        "H_9",
+        ""
+    ],
+    [
+        "option",
+        "H_10_1",
+        "What's that?",
+        "H_11",
+        ""
+    ],
+    [
+        "option",
+        "H_11_1",
+        "I forgive you.",
+        "H_12",
+        ""
+    ],
+    [
+        "option",
+        "H_11_2",
+        "You should be.",
+        "H_13",
+        ""
+    ],
+    [
+        "option",
+        "H_12_1",
+        "I'm not sure I follow?",
+        "H_14",
+        ""
+    ],
+    [
+        "option",
+        "H_14_1",
+        "That would have been bad.",
+        "H_15",
+        ""
+    ],
+    [
+        "menu",
+        "I_0",
+        "I usually prefer to stay at home, but tonight I'm having a nice time. Besides, I could probably do for some fresh air and social interaction.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "I_1",
+        "Go away.",
+        [
+            "I_1_1"
+        ]
+    ],
+    [
+        "menu",
+        "I_2",
+        "I said go away.",
+        [
+            "I_2_1"
+        ]
+    ],
+    [
+        "menu",
+        "I_3",
+        "Leave.",
+        [
+            "I_3_1"
+        ]
+    ],
+    [
+        "menu",
+        "I_4",
+        "Ok look, what is it you want?",
+        [
+            "I_4_1",
+            "I_4_2"
+        ]
+    ],
+    [
+        "menu",
+        "I_5",
+        "...",
+        [
+            "I_5_1"
+        ]
+    ],
+    [
+        "menu",
+        "I_6",
+        "Really?",
+        [
+            "I_6_1",
+            "I_6_2"
+        ]
+    ],
+    [
+        "menu",
+        "I_7",
+        "Wow, this is the first time someone has invited me to hang out with them... Sure, I'll join you.",
+        [
+            "GREAT"
+        ]
+    ],
+    [
+        "menu",
+        "I_8",
+        "Figures. Goodbye.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "option",
+        "I_1_1",
+        "Ok.",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = I_2;"
+    ],
+    [
+        "option",
+        "I_2_1",
+        "Sure.",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = I_3;"
+    ],
+    [
+        "option",
+        "I_3_1",
+        "Okeedokee.",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = I_4;"
+    ],
+    [
+        "option",
+        "I_4_1",
+        "Want to come to the Field tonight?",
+        "I_5",
+        ""
+    ],
+    [
+        "option",
+        "I_4_2",
+        "Nothing, just messing with you.",
+        "I_8",
+        ""
+    ],
+    [
+        "option",
+        "I_5_1",
+        "Well?",
+        "I_6",
+        ""
+    ],
+    [
+        "option",
+        "I_6_1",
+        "Yes!",
+        "I_7",
+        "game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = I_7; convince_speaker();"
+    ],
+    [
+        "option",
+        "I_6_2",
+        "Just kidding!",
+        "I_8",
+        ""
+    ],
+    [
+        "menu",
+        "M_0",
+        "It sure is cool in here! Much nicer than out in the desert.",
+        [
+            "INDEED"
+        ]
+    ],
+    [
+        "menu",
+        "M_1",
+        "Hi! What brings you out here?",
+        [
+            "M_1_1",
+            [
+                "menu_vars.npc_t_quest_stage==1",
+                "M_1_2"
+            ]
+        ]
+    ],
+    [
+        "menu",
+        "M_2",
+        "Sorry, but no can do! At least not until I find some buried treasure.",
+        [
+            "M_2_1"
+        ]
+    ],
+    [
+        "menu",
+        "M_3",
+        "Oh Theo? He's such a worrywort, jeez. He means well though, so just tell him I'm at the oasis and so have plenty of water.",
+        [
+            "M_3_1"
+        ]
+    ],
+    [
+        "menu",
+        "M_4",
+        "It sure it sure is! I think it's on the island by the northwestern shore of Elysium. I would go myself, but it's too far to swim to.",
+        [
+            [
+                "menu_vars.npc_m_quest_stage==0",
+                "M_4_1"
+            ],
+            [
+                "menu_vars.npc_m_quest_stage==2",
+                "M_4_2"
+            ]
+        ]
+    ],
+    [
+        "menu",
+        "M_5",
+        "Well you'll need a way to travel across water. Now that I think about it, maybe Sui could lend your her surfboard? She's usually at southern beach.",
+        [
+            [
+                "flag(HAS_SURFBOARD)",
+                "M_5_1"
+            ],
+            [
+                "!flag(HAS_SURFBOARD)",
+                "M_5_2"
+            ]
+        ]
+    ],
+    [
+        "menu",
+        "M_6",
+        "Did you find the treasure?",
+        [
+            [
+                "menu_vars.npc_m_quest_stage==2",
+                "M_6_1"
+            ],
+            "M_6_2"
+        ]
+    ],
+    [
+        "menu",
+        "M_7",
+        "Oh cool! Good luck then!",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "M_8",
+        "Awesome!! Now I'll join at the Field tonight for sure.",
+        [
+            "M_8_1"
+        ]
+    ],
+    [
+        "menu",
+        "M_9",
+        "Ok, well remember to go to the soutern beach and ask Sui for her board. The treasure should be on the island by the northwest coast.",
+        [
+            [
+                "flag(HAS_SURFBOARD)",
+                "M_5_1"
+            ],
+            [
+                "!flag(HAS_SURFBOARD)",
+                "M_5_2"
+            ]
+        ]
+    ],
+    [
+        "menu",
+        "M_10",
+        "Wow, yes!! I'm surprised you found it, see you at the Field tonight!",
+        [
+            "M_8_1"
+        ]
+    ],
+    [
+        "option",
+        "M_1_1",
+        "Want to come to the Field tonight?",
+        "M_2",
+        ""
+    ],
+    [
+        "option",
+        "M_1_2",
+        "Your brother Theo is looking for you.",
+        "M_3",
+        ""
+    ],
+    [
+        "option",
+        "M_2_1",
+        "Buried treasure? That sounds cool.",
+        "M_4",
+        ""
+    ],
+    [
+        "option",
+        "M_3_1",
+        "Will do!",
+        null,
+        "enter_state_level(); menu_vars.npc_t_quest_stage = 2;"
+    ],
+    [
+        "option",
+        "M_4_1",
+        "I'll take a stab at it.",
+        "M_5",
+        "menu_vars.npc_m_quest_stage = 1; game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = M_6;"
+    ],
+    [
+        "option",
+        "M_4_2",
+        "You mean this treasure?",
+        "M_10",
+        "game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = M_8; convince_speaker(); menu_vars.npc_m_quest_stage = 3;"
+    ],
+    [
+        "option",
+        "M_5_1",
+        "Actually, she already lent it to me.",
+        "M_7",
+        ""
+    ],
+    [
+        "option",
+        "M_5_2",
+        "I'll go ask her, thanks!",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "M_6_1",
+        "I sure did.",
+        "M_8",
+        "game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = M_8; convince_speaker(); menu_vars.npc_m_quest_stage = 3;"
+    ],
+    [
+        "option",
+        "M_6_2",
+        "Not yet.",
+        "M_9",
+        ""
+    ],
+    [
+        "option",
+        "M_8_1",
+        "See ya!",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "menu",
+        "GUESS_NPC_O_RIDDLE",
+        "A task, hard, yet we all do the same, reverse the oppposite of good, and you shall know its name.",
+        []
+    ],
+    [
+        "menu",
+        "O_0",
+        "\\\"The gates of hell are open night and day; Smooth the descent, and easy is the way: But to return, and view the cheerful skies, In this the task and mighty labor lies.\\\" I read that many years ago, and have not forgotten it.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "O_1",
+        "Answer my riddle.",
+        [
+            "O_1_1",
+            "O_1_2"
+        ]
+    ],
+    [
+        "menu",
+        "O_2",
+        "You are correct.",
+        [
+            "O_2_1",
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "O_3",
+        "You are wrong.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "O_4",
+        "Very well.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "O_5",
+        "Be seeing you.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "option",
+        "O_1_1",
+        "Very well.",
+        null,
+        "guess_npc_o_riddle();"
+    ],
+    [
+        "option",
+        "O_1_2",
+        "No.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "O_2_1",
+        "Come to the Field tonight.",
+        "O_4",
+        "convince_speaker(); set_speaker_menu_id(O_5);"
+    ],
+    [
+        "menu",
+        "R_0",
+        "Thanks for getting out of that cave! I probably would have been stuck there all day if not for you.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "R_1",
+        "Oh, you scared the bejesus out of me!",
+        [
+            "R_1_1"
+        ]
+    ],
+    [
+        "menu",
+        "R_2",
+        "Spelunking of course! Or at least I was, until I got lost. Since then I've just been stumbling around for the exit.",
+        [
+            "R_2_1"
+        ]
+    ],
+    [
+        "menu",
+        "R_3",
+        "Eh I consider it more of an annoyance. It's happened before, though never when I've been this deep into the cave. Say, would you guide me out of here?",
+        [
+            "R_3_1",
+            "R_3_2"
+        ]
+    ],
+    [
+        "menu",
+        "R_4",
+        "Thanks so much! Well, lead the way.",
+        [
+            "R_4_1"
+        ]
+    ],
+    [
+        "menu",
+        "R_5",
+        "Please!",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "R_6",
+        "Ah, fresh air and sunlight! I think I'll go to the Field tonight to celebrate my return.",
+        [
+            "R_6_1"
+        ]
+    ],
+    [
+        "menu",
+        "R_7",
+        "Will you please lead me out of here?",
+        [
+            "R_3_1",
+            "R_3_2"
+        ]
+    ],
+    [
+        "option",
+        "R_1_1",
+        "What are you doing in here?",
+        "R_2",
+        ""
+    ],
+    [
+        "option",
+        "R_2_1",
+        "Sounds scary.",
+        "R_3",
+        ""
+    ],
+    [
+        "option",
+        "R_3_1",
+        "Sure.",
+        "R_4",
+        ""
+    ],
+    [
+        "option",
+        "R_3_2",
+        "No can do.",
+        "R_5",
+        "game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = R_7;"
+    ],
+    [
+        "option",
+        "R_4_1",
+        "Ok, now stay close...",
+        null,
+        "convince_speaker(); game.player_row = 20; game.player_col = 120; game.entity_kinds[game.speaking_npc_row][game.speaking_npc_col] = EMPTY; game.entity_kinds[20][119] = NPC; game.entity_colors[20][119] = COLOR_WHITE; game.npc_ids[20][119] = Riley; game.menu_body_ids[20][119] = R_6; enter_state_level();"
+    ],
+    [
+        "option",
+        "R_6_1",
+        "See you then!",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "menu",
+        "S_0",
+        "Check it out! I turned the seashell you found into a necklace! I'm wearing it as a testament to YOUR bravery on those waves!",
+        [
+            "RIGHT_ON"
+        ]
+    ],
+    [
+        "menu",
+        "S_1",
+        "Hey dude! I have a favor to ask you, can you grab my board over there?",
+        [
+            "OKAY"
+        ]
+    ],
+    [
+        "menu",
+        "S_2",
+        "Gnarly! Now you can ride the waves in style... aaaand do me a solid?",
+        [
+            "S_2_1",
+            "S_2_2"
+        ]
+    ],
+    [
+        "menu",
+        "S_3",
+        "I want a sick seashell necklace. Can you go out into the waves and find me the perfect seashell? I'd do it myself but the waves look pretty rough today.",
+        [
+            "S_3_1"
+        ]
+    ],
+    [
+        "menu",
+        "S_4",
+        "Ah totally uncool. At least give me my board back!",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "S_5",
+        "Tubular! See you in a few.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "S_6",
+        "Suuuupeeeeeeer sick seashell!!! You crushed those waves; good thing I didn't try it though! I think I'll this shell off at the Field tonight, you should come!",
+        [
+            "S_6_1"
+        ]
+    ],
+    [
+        "option",
+        "S_2_1",
+        "What's up?",
+        "S_3",
+        ""
+    ],
+    [
+        "option",
+        "S_2_2",
+        "Nah.",
+        "S_4",
+        ""
+    ],
+    [
+        "option",
+        "S_3_1",
+        "Sure.",
+        "S_5",
+        ""
+    ],
+    [
+        "option",
+        "S_6_1",
+        "Say less!",
+        null,
+        "enter_state_level(); convince_speaker();"
+    ],
+    [
+        "menu",
+        "T_0",
+        "When we were young, Mandy and I's mother passed away, and I've looked after Mandy ever since. If something happened to her, I don't know what I'd do...",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "T_1",
+        "Hello, how are you?",
+        [
+            "T_1_1",
+            "T_1_2",
+            "T_1_3"
+        ]
+    ],
+    [
+        "menu",
+        "T_2",
+        "Ah, well in that case I envy you. I'm worried about my sister Mandy, she went to the desert this morning yesterday and hasn't returned yet.",
+        [
+            "T_2_1",
+            "T_2_2"
+        ]
+    ],
+    [
+        "menu",
+        "T_3",
+        "Oh, I was just asking...",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "T_4",
+        "Oh, you would? Thank you so much! The desert is north-east of here, just south of Xavier's castle. Please let me know how she's doing.",
+        [
+            "T_4_1"
+        ]
+    ],
+    [
+        "menu",
+        "T_5",
+        "Have you checked on Mandy? How is she?",
+        [
+            [
+                "menu_vars.npc_t_quest_stage==2",
+                "T_5_1"
+            ],
+            "T_5_2"
+        ]
+    ],
+    [
+        "menu",
+        "T_6",
+        "Oh of course! Well now I feel better. You know what? I may even go to the Field tonight.",
+        [
+            "T_6_1"
+        ]
+    ],
+    [
+        "menu",
+        "T_7",
+        "Oh, I see. Well please check on her soon.",
+        [
+            "WILL_DO"
+        ]
+    ],
+    [
+        "menu",
+        "T_8",
+        "Thanks again for checking on Mandy for me. See you tonight!",
+        [
+            "SEE_YA"
+        ]
+    ],
+    [
+        "option",
+        "T_1_1",
+        "I'm well, how are you?",
+        "T_2",
+        ""
+    ],
+    [
+        "option",
+        "T_1_2",
+        "So-so.",
+        "T_2",
+        ""
+    ],
+    [
+        "option",
+        "T_1_3",
+        "What's it to you?",
+        "T_3",
+        ""
+    ],
+    [
+        "option",
+        "T_2_1",
+        "I can check on her for you.",
+        "T_4",
+        "menu_vars.npc_t_quest_stage = 1;"
+    ],
+    [
+        "option",
+        "T_2_2",
+        "Sounds like a personal problem.",
+        null,
+        "enter_state_level();"
+    ],
+    [
+        "option",
+        "T_4_1",
+        "I'll be back.",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = T_5;"
+    ],
+    [
+        "option",
+        "T_5_1",
+        "She's at the oasis.",
+        "T_6",
+        ""
+    ],
+    [
+        "option",
+        "T_5_2",
+        "I haven't checked yet.",
+        "T_7",
+        ""
+    ],
+    [
+        "option",
+        "T_6_1",
+        "See you there!",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = T_8; convince_speaker(); menu_vars.npc_t_quest_stage = 4;"
+    ],
+    [
+        "menu",
+        "X_0",
+        "What an enchanted evening. Thank you my friend for finding the key I had lost. I would like to share party potions with you, but a wizard my age should only drink water.",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "X_1",
+        "Good day to you friend. What brings you to my castle?",
+        [
+            "X_1_1"
+        ]
+    ],
+    [
+        "menu",
+        "X_2",
+        "Hmmm... I would like to join you, but I am currently facing a small problem.",
+        [
+            "X_2_1"
+        ]
+    ],
+    [
+        "menu",
+        "X_3",
+        "Well, I seemed to have misplaced my ruby key to my alchemical ingredients room. I think I lost it while exploring the northern caves.",
+        [
+            "X_3_1",
+            "X_3_2"
+        ]
+    ],
+    [
+        "menu",
+        "X_4",
+        "You will? Marvelous! If you do this then I will certainly join you tonight at the Field!",
+        [
+            "GREAT"
+        ]
+    ],
+    [
+        "menu",
+        "X_5",
+        "Oh, what am I to do...I knew I shouldn't stored my medicine in that room...maybe I can buy more at the mall?",
+        [
+            "BYE"
+        ]
+    ],
+    [
+        "menu",
+        "X_6",
+        "You found my key! Thank you so much!",
+        [
+            "X_6_1"
+        ]
+    ],
+    [
+        "menu",
+        "X_7",
+        "I trust I will see you this evening?",
+        [
+            "INDEED"
+        ]
+    ],
+    [
+        "option",
+        "X_1_1",
+        "Want to come to the Field tonight?",
+        "X_2",
+        ""
+    ],
+    [
+        "option",
+        "X_2_1",
+        "What's the issue?",
+        "X_3",
+        ""
+    ],
+    [
+        "option",
+        "X_3_1",
+        "I could find it for you.",
+        "X_4",
+        ""
+    ],
+    [
+        "option",
+        "X_3_2",
+        "That's unfortunate.",
+        "X_5",
+        ""
+    ],
+    [
+        "option",
+        "X_6_1",
+        "You're welcome, Xavier.",
+        null,
+        "enter_state_level(); game.menu_body_ids[game.speaking_npc_row][game.speaking_npc_col] = X_7; convince_speaker();"
+    ]
+]

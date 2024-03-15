@@ -1,0 +1,10 @@
+.cache
+.vscode
+*.save
+compile_commands.json
+elysium
+elysium_deb
+include/menu.h
+src/ending.c
+src/menu.c
+src/world.c
